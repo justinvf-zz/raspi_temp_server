@@ -6,7 +6,7 @@ Setup your RaspberryPi to give you stats about your household's temp.
 ![raspi hardware](/images/raspi.jpg "Hardware")
 
 ## Setup
-First you need to ![setup your raspi with the sensor](http://learn.adafruit.com/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing). I followed Adafruit's tutorial on the subject and it was great.
+First you need to [setup your raspi](http://learn.adafruit.com/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing). Adafruit's tutorial is fantastic.
 
 Next, run the setup script to build the database:
 

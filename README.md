@@ -16,18 +16,18 @@ python timeseries_db.py
 
 You can edit some things in the `config.py` file too, such as your name and your "get out of bed temperature".
 
-Now just setup the server. I have the logger run in one screen session and the server in another.
+Now just setup the server. I have the logger run in one screen session and the server in another (`sudo apt-get install screen` if you don't have that).
 
 ```
 # Start the logger
-sreen -S temp-logger
+screen -S temp-logger
 python temp_logger.py
-Ctrl-A D
+Ctrl-A d
 
 # Start the server
-sreen -S temp-server
+screen -S temp-server
 sudo python temp_server.py
-Ctrl-A D
+Ctrl-A d
 ```
 
 That should do it. You can now open a browser on some other box and enter the raspi's ip address. To make it easier, you can [setup zeroconf](http://www.raspberrypi.org/phpBB3/viewtopic.php?f=66&t=18207). This allows you to just type "raspberrypi.local" into your browser.

@@ -24,6 +24,16 @@ def get_last_24_hours():
               'GROUP BY as_hour ORDER BY as_hour',  (lower_limit,))
     return c.fetchall()
 
+def get_last_7_days():
+    conn.rollback()
+    # Use this because the "now" in sqllite is not in the same time frame
+    # as the logger.
+    lower_limit = datetime.datetime.now() - datetime.timedelta(days=7)
+    c.execute('SELECT strftime("%m-%d %H:00",ts) as_hour, AVG(temp_f) '
+              'FROM temp_data WHERE ts > ?'
+              'GROUP BY as_hour ORDER BY as_hour',  (lower_limit,))
+    return c.fetchall()
+
 def get_last_60_minutes():
     conn.rollback()
     lower_limit = datetime.datetime.now() - datetime.timedelta(minutes=60)

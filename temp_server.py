@@ -75,10 +75,10 @@ def build_response():
         msg = "It's a little cold. Better stay in bed."
     intro = ("Hello {}! It is {:.2f} degrees F.<br> {}"
              .format(NAME, last_temp, msg))
-    return page_template.format(intro,
-                                build_hacky_list(temp_times_days),
-                                build_hacky_list(temp_times_hours)
-                                build_hacky_list(temp_times_minutes))
+    return page_template.format(build_hacky_list(temp_times_days),
+                                build_hacky_list(temp_times_hours),
+                                build_hacky_list(temp_times_minutes),
+                                intro)
 
 class tempServerHandler(BaseHTTPRequestHandler):
     def do_GET(self):

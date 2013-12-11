@@ -4,6 +4,6 @@ DB_FILE = 'time_temp.db'
 SLEEP_TIME = 30
 
 PORT_NUMBER = 80
-NAME = "Mr. Smith (change in config.py!)"
+NAME = "Tiffany"
 # Temperature to stay in bed below
 TOO_COLD = 65
